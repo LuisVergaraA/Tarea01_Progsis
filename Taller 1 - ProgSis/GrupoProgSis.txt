@@ -1,0 +1,16 @@
+Grupo # 5
+
+Integrantes:
+- Borja Luis
+- Criollo Isaac (Líder)
+- Vergara Luis
+
+Motivo:
+Escogimos a Isaac como líder del grupo porque demuestra un alto nivel de compromiso y responsabilidad en cada proyecto. Es puntual y se asegura de que todos cumplan con sus tareas a tiempo, manteniendo el trabajo ordenado. También muestra empatía y disposición para ayudar a los demás cuando enfrentan dificultades; además, tiene una habilidad destacable para comunicar ideas de manera clara y así evitar malos entendidos.
+
+Division:
+Decidimos que la division de las actividades del taller sería:
+(Vergara Luis) le tocaría hacer Implementación de los Cálculos Geométricos el archivo calculos.c (puntos 1 y 2) 
+(Borja Luis) le tocaría hacer Interfaz y Gestión de Datos del Usuario el archivo datos.c (puntos 3, 4 y 5)
+(Criollo Isaac) le tocaría hacer Integración y Gestión de Compilación los archivos main.c y Makefile (puntos 6, 7 y8)
+
