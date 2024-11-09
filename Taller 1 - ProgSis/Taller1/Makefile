@@ -1,38 +1,26 @@
-all: programa
+CC = gcc
+CFLAGS = -Wall -g -O2
+ASFLAGS = -S
 
-programa: Main.o Datos.o SuperVolumen.o AreaPerimetro.o
-	gcc -o prueba Main.o Datos.o SuperVolumen.o AreaPerimetro.o
+SRCS = AreaPerimetro.c Datos.c Main.c SuperVolumen.c
+OBJS = $(SRCS:.c=.o)
+SFILES = $(SRCS:.c=.s)
 
-Main.o: Main.c Datos.h
-	gcc -c Main.c
+EXEC = programa
 
-Datos.o: Datos.c Datos.h
-	gcc -c Datos.c
+all: $(EXEC)
 
-SuperVolumen.o: SuperVolumen.c Datos.h
-	gcc -c SuperVolumen.c
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-AreaPerimetro.o: AreaPerimetro.c Datos.h
-	gcc -c AreaPerimetro.c
+%.s: %.c
+	$(CC) $(ASFLAGS) $< -o $@
 
-clean:
-	rm -f programa *.o
-all: programa
-
-programa: Main.o Datos.o SuperVolumen.o AreaPerimetro.o
-	gcc -o programa Main.o Datos.o SuperVolumen.o AreaPerimetro.o
-
-Main.o: Main.c Datos.h
-	gcc -c Main.c
-
-Datos.o: Datos.c Datos.h
-	gcc -c Datos.c
-
-SuperVolumen.o: SuperVolumen.c Datos.h
-	gcc -c SuperVolumen.c
-
-AreaPerimetro.o: AreaPerimetro.c Datos.h
-	gcc -c AreaPerimetro.c
+$(EXEC): $(OBJS)
+	$(CC) $(OBJS) -o $(EXEC)
 
 clean:
-	rm -f programa *.o
+	rm -f $(OBJS) $(SFILES) $(EXEC)
+
+cleanobjs:
+	rm -f $(OBJS) $(SFILES)
