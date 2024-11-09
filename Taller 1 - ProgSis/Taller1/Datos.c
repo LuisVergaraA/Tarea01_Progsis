@@ -32,97 +32,122 @@ void calcular3D(const char *usuario){
     int x;
     char entrada[10];
     do{
-        imprimirMenu3D();   
+	bool escribir=true;
+        imprimirMenu3D();
         scanf("%d", &x);
+	char *cadena;
         switch(x) {
             case 1:
                 printf("Has elegido la opción 1.\n");
                 calcularCubo();
+		cadena="Cubo";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 2:
                 printf("Has elegido la opción 2.\n");
                 calcularCuboide();
+		cadena="Cuboide";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 3:
                 printf("Has elegido la opción 3.\n");
                 calcularCilindroRecto();
+		cadena="CilindroRecto";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 4:
                 printf("Has elegido la opción 4.\n");
                 calcularEsfera();
+		cadena="Esfera";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 5:
                 printf("Has elegido la opción 5.\n");
                 calcularConoCircularRecto();
+		cadena="ConoCircularRecto";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 6:
                 printf("Saliendo de calculadora 3D... \n");
+		escribir=false;
                 break;
             default:
                 printf("Opción no válida. Por favor ingrese una opcion\n");
         }
+	if(escribir){
+		escribirBitacora(cadena);
+	}
     }while(x!=6);
 }
 
 void calcular2D(const char *usuario){
     char entrada[10];
     int x;
-    
+
     do{
         imprimirMenu2D();
         scanf("%d", &x);
+	bool escribir=true;
+	char *cadena;
         switch(x) {
             case 1:
                 printf("Has elegido la opción 1.\n");
                 calcularTrianguloA();
+		cadena="Triangulo";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 2:
                 printf("Has elegido la opción 2.\n");
                 calcularParalelogramo();
+		cadena="Paralelogramo";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 3:
                 printf("Has elegido la opción 3.\n");
                 calcularCuadrado();
+		cadena="Cuadrado";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 4:
                 printf("Has elegido la opción 4.\n");
                 calcularRectangulo();
+		cadena="Rectangulo";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 5:
                 printf("Has elegido la opción 5.\n");
                 calcularombo();
+		cadena="Rombo";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 6:
                 printf("Has elegido la opción 6.\n");
                 calcularTrapecio();
+		cadena="Trapecio";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 7:
                 printf("Has elegido la opción 7.\n");
                 calcularCirculo();
+		cadena="Circulo";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 8:
                 printf("Has elegido la opción 8.\n");
                 calcularPR();
+		cadena="PoligonoRegular";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 9:
                 printf("Saliendo de calculadora 2D... \n");
+		escribir=false;
                 break;
             default:
                 printf("Opción no válida. Por favor ingrese una opcion\n");
         }
+	if(escribir){
+		escribirBitacora(cadena);
+	}
     }while(x!=9);
 }
 

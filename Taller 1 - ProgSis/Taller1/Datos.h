@@ -22,4 +22,6 @@ void calcularCuadrado();
 void calcularParalelogramo();
 void calcularTrianguloA();
 
+//EscribirARchivo
+void escribirBitacora(); 
 #endif
