@@ -8,18 +8,34 @@
 char usuario[50];
 char clave[50];
 
+char* obtenerFechaHoy() {
+    // Crear un objeto para almacenar la fecha y hora actual
+    static char fecha[11];  // "yyyy/MM/dd" tiene 10 caracteres + '\0'
+    time_t t;
+    struct tm *tm_info;
+
+    // Obtener la hora actual
+    time(&t);
+    tm_info = localtime(&t);
+
+    // Formatear la fecha en la cadena
+    snprintf(fecha, sizeof(fecha), "%4d/%02d/%02d", tm_info->tm_year + 1900, tm_info->tm_mon + 1, tm_info->tm_mday);
+
+    return fecha;
+}
+
 void escribirBitacora(char* cadena) {
-    FILE *file = fopen("bitacora.txt", "a");
+	FILE *file = fopen("bitacora.txt", "a");
 
-    if (file == NULL) {
-        printf("No se pudo abrir el archivo de bitácora.\n");
-        return;
-    }
+	if (file == NULL) {
+		printf("No se pudo abrir el archivo de bitácora.\n");
+		return;
+	}
+	char *fecha=obtenerFechaHoy();
+	fprintf(file, "%s: %s - %s\n",fecha, usuario, cadena);
 
-    fprintf(file, "%s-%s %s\n", usuario, clave, cadena);
-
-    // Cerrar el archivo
-    fclose(file);
+	// Cerrar el archivo
+	fclose(file);
 }
 
 bool validarUsuarioClave(const char* usuario, const char* clave) {

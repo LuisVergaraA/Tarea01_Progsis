@@ -1,4 +1,3 @@
-acosta-1234 Ingreso exitoso al sistema
-acosta-1234 Poligono Regular
-acosta-1234 Cono Circular Recto
-acosta-1234 Salida del sistema
+2024/11/08: acosta - Ingreso exitoso al sistema
+2024/11/08: acosta - Cubo
+2024/11/08: acosta - Salida del sistema
