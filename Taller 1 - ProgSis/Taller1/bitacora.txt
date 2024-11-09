@@ -1,4 +1,4 @@
-acosta-1234 Cubo
-acosta-1234 Cubo
-acosta-1234 Cubo
-acosta-1234 CilindroRecto
+acosta-1234 Ingreso exitoso al sistema
+acosta-1234 Poligono Regular
+acosta-1234 Cono Circular Recto
+acosta-1234 Salida del sistema

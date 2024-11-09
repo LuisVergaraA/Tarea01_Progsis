@@ -59,9 +59,13 @@ int main(){
 	// Intentar autenticar
 	autenticado = validarUsuarioClave(usuario, clave);
 	if (!autenticado) {
+		char *cadena="Ingreso fallido usuario/clave erroneo";
+		escribirBitacora(cadena);
 		printf("Usuario o clave incorrectos. Saliendo del programa.\n");
 		return 1;
 	}
+	char *cadena="Ingreso exitoso al sistema";
+	escribirBitacora(cadena);
 	int t;
 	do {
 		printf("Escoja una opción del menú:\n");
@@ -81,6 +85,8 @@ int main(){
 				calcular3D();
 				break;
 			case 3:
+				char *cadena="Salida del sistema";
+				escribirBitacora(cadena);
 				printf("Programa Terminado, gracias.\n");
 				break;
 			default:

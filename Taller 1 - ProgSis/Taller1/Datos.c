@@ -52,7 +52,7 @@ void calcular3D(const char *usuario){
             case 3:
                 printf("Has elegido la opción 3.\n");
                 calcularCilindroRecto();
-		cadena="CilindroRecto";
+		cadena="Cilindro Recto";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 4:
@@ -64,7 +64,7 @@ void calcular3D(const char *usuario){
             case 5:
                 printf("Has elegido la opción 5.\n");
                 calcularConoCircularRecto();
-		cadena="ConoCircularRecto";
+		cadena="Cono Circular Recto";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 6:
@@ -135,7 +135,7 @@ void calcular2D(const char *usuario){
             case 8:
                 printf("Has elegido la opción 8.\n");
                 calcularPR();
-		cadena="PoligonoRegular";
+		cadena="Poligono Regular";
                 printf("\n Si desea realizar el analisis de otra figura o salir:\n ");
                 break;
             case 9:
